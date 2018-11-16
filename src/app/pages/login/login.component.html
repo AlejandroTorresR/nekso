@@ -1,0 +1,15 @@
+<div class="bg-main verticalHeight">
+	<form class="form-signin" [formGroup]="userData" (ngSubmit)="loginUser()">
+		<div class="img-logo">
+			<img src="assets/nekso-logo.svg" alt="nekso">
+		</div>
+		<div class="form-container">
+			<input type="email" formControlName="email" class="form-control first" placeholder="E-mail">
+			<input type="password" formControlName="password" class="form-control last" placeholder="Contraseña">
+			<button class="btn btn-lg btn-nekso btn-block" type="submit" [disabled]="!userData.valid">Iniciar Sesión</button>
+		</div>
+		<div class="text-right">
+			<button type="button" class="btn btn-link btn-sm text-white" (click)="_SweetalertsService.recoveryPass()">Recuperar contraseña</button>
+		</div>
+	</form>
+</div>

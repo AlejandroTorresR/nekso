@@ -1,0 +1,54 @@
+<div class="margin-left">
+	<br>
+	<div class="row" style="width: 100%">
+		<div class="col-12 col-lg-6 mb-4">
+			<div class="card">
+			  <div class="card-body">
+			    <doughnutChart></doughnutChart>
+			  </div>
+			</div>
+		</div>
+		<div class="col-12 col-lg-6 mb-4">
+			<div class="card">
+			  <div class="card-body">
+			    <barChart></barChart>
+			  </div>
+			</div>
+		</div>
+	
+		<div class="col-12 col-md-12">
+			<div class="card mb-4">
+				<div class="card-body">
+			    <table class="table">
+					  <thead>
+					    <tr>
+					      <th scope="col">#</th>
+					      <th scope="col">Nombre</th>
+					      <th scope="col" class="hide-mobile">E-mail</th>
+					      <th scope="col">Acción</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr *ngFor="let d of drivers">
+					      <th scope="row">
+									<img src="{{d.image}}" alt="{{d.name}}" class="rounded-circle" width="32px">
+					      </th>
+					      <td>{{d.name}}</td>
+					      <td class="hide-mobile">{{d.email}}</td>
+					      <td class="actions">
+									<span class="text-primary">
+										<i class="material-icons">create</i>
+									</span>
+									<span class="text-danger">
+										<i class="material-icons">delete</i>
+									</span>
+					      </td>
+					    </tr>
+					  </tbody>
+					</table>	
+			  </div>
+			</div>
+		</div>
+	</div>
+
+</div>

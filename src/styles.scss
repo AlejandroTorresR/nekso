@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body{
+	position: relative;
+	background-color: #efefef !important;
+	height: 100%;
+}
+
+.bg-main{
+	background-color: #FE0063 !important;
+}
+
+.margin16h{
+	margin-left: 16px;
+    margin-right: 16px;
+}
+.margin-left{margin-left: 32px;}
+
+.verticalHeight{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn-nekso{
+	background-color: #FE0063;
+	color: #ffffff;
+}
+.btn-nekso:hover{
+	background-color: #ea035d;
+}
+
+.parent{
+    position: absolute;
+    display: table;
+    width: 100%;
+    height: 100%;
+    &.dashboard{
+        height: calc(100vh - 60px) !important;
+    }
+    .div-row{
+        display: table-row;
+        width: 100%;
+        .div-cell{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .div-cell-top{
+            display: table-cell;
+            vertical-align: top;
+        }
+        .div-cell-bottom{
+            display: table-cell;
+            vertical-align: bottom;
+        }
+        .div-cell-sidebar{
+            display: table-cell;
+            vertical-align: top;
+            width: 1%;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hide-mobile{
+        display: none !important;
+    }
+}
