@@ -1,0 +1,133 @@
+<div class="container">
+	<br>
+	<form class="form-detail needs-validation" [formGroup]="detailData" (ngSubmit)="saveUser()" [class.was-validated]="validForm">
+
+		<div class="image-upload mb-3">
+	    <label for="file-input">
+	        <img src="{{detailData.controls.image.value}}" class="rounded-circle"/>
+	    </label>
+	    <input id="file-input" type="file" (change)="pictureChange($event)"/>
+		</div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="firstName">Nombre</label>
+        <input type="text" class="form-control" id="firstName" placeholder="" formControlName="firstName" required>
+        <div class="invalid-feedback">
+        	Nombre es requerido.
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="lastName">Apellidos</label>
+        <input type="text" class="form-control" id="lastName" placeholder="" formControlName="lastName" required>
+        <div class="invalid-feedback">
+        	Apellido es requerido.
+        </div>
+      </div>
+    </div>
+
+		<div class="row">
+	    <div class="col-md-6 mb-3">
+	      <label for="username">Nombre de usuario</label>
+	      <div class="input-group">
+	        <div class="input-group-prepend">
+	          <span class="input-group-text">@</span>
+	        </div>
+	        <input type="text" class="form-control" id="username" placeholder="Username" formControlName="username" required>
+	        <div class="invalid-feedback">
+	          Usuario es requerido.
+	        </div>
+	      </div>
+	    </div>
+	    <div class="col-md-6 mb-3">
+	      <label for="phone">Teléfono</label>
+	      <input type="text" class="form-control" id="phone" placeholder="" formControlName="phone" required>
+	      <div class="invalid-feedback">
+	        Teléfono es requerido.
+	      </div>
+	    </div>
+	  </div>
+
+		<div class="row">
+	    <div class="col-md-6 mb-3">
+	      <label for="email">E-mail</label>
+	      <input type="email" class="form-control" id="email" placeholder="you@example.com" formControlName="email" required>
+	      <div class="invalid-feedback">
+	        Ingresa un E-mail válido.
+	      </div>
+	    </div>
+	    <div class="col-md-6 mb-3">
+	      <label for="gender">Genero</label>
+	      <select class="custom-select d-block w-100" id="gender" formControlName="gender" required>
+	      	<option value="">Seleccionar...</option>
+	      	<option value="Hombre">Hombre</option>
+	      	<option value="Mujer">Mujer</option>
+	      </select>
+	      <div class="invalid-feedback">
+	        Genero es requerido.
+	      </div>
+	    </div>
+	  </div>
+
+    <div class="mb-3">
+      <label for="address">Dirección</label>
+      <input type="text" class="form-control" id="address" placeholder="1234 Main St" formControlName="address" required>
+      <div class="invalid-feedback">
+        Ingresa una dirección.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5 mb-3">
+        <label for="city">Ciudad</label>
+        <select class="custom-select d-block w-100" id="city" formControlName="city" required>
+          <option value="">Seleccionar...</option>
+          <option value="Indianapolis">Indianapolis</option>
+          <option value="Greenwood">Greenwood</option>
+          <option value="San Martin">San Martin</option>
+          <option value="Charlotte">Charlotte</option>
+          <option value="Chicago">Chicago</option>
+          <option value="Albany">Albany</option>
+          <option value="San Francisco">San Francisco</option>
+          <option value="Hickory Hills">Hickory Hills</option>
+          <option value="Bellefontaine">Bellefontaine</option>
+          <option value="Davenport">Davenport</option>
+          <option value="Bloomington">Bloomington</option>
+          <option value="Bakersfield">Bakersfield</option>
+        </select>
+        <div class="invalid-feedback">
+          Ciudad es requerido.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="state">Estado</label>
+        <select class="custom-select d-block w-100" id="state" formControlName="state" required>
+          <option value="">Seleccionar...</option>
+          <option value="Indiana">Indiana</option>
+          <option value="Mississippi">Mississippi</option>
+          <option value="California">California</option>
+          <option value="North Carolina">North Carolina</option>
+          <option value="Illinois">Illinois</option>
+          <option value="New York">New York</option>
+          <option value="Ohio">Ohio</option>
+          <option value="Iowa">Iowa</option>
+        </select>
+        <div class="invalid-feedback">
+          Estado es requerido.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="zip">Código Postal</label>
+        <input type="text" class="form-control" id="zip" placeholder="" formControlName="zip" required>
+        <div class="invalid-feedback">
+          Código postal es requerido.
+        </div>
+      </div>
+    </div>
+    <hr class="mb-4">
+    <button class="btn btn-primary btn-lg" type="submit">Guardar</button>&nbsp;
+    <button class="btn btn-default btn-lg" type="button" routerLink="../drivers">Cancelar</button>
+    <div class="mb-4"></div>
+	</form>
+
+</div>

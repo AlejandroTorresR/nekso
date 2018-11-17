@@ -31,14 +31,14 @@
 					    </tr>
 					  </thead>
 					  <tbody>
-					    <tr *ngFor="let d of drivers; let i = index">
+					    <tr *ngFor="let d of passengers; let i = index">
 					      <th scope="row" class="actions">
 									<img src="{{d.image}}" alt="{{d.name}}" class="rounded-circle" width="32px">
 					      </th>
 					      <td>{{d.firstName}} {{d.lastName}}</td>
 					      <td class="hide-mobile">{{d.email}}</td>
 					      <td class="actions">
-							<span class="text-primary action-btn" [routerLink]="['../detail']" [queryParams]="{drivers: i}">
+							<span class="text-primary action-btn" [routerLink]="['../detail']" [queryParams]="{passengers: i}">
 								<i class="material-icons">create</i>
 							</span>
 							<span class="text-danger action-btn" (click)="deleteUser(i, d.firstName)">

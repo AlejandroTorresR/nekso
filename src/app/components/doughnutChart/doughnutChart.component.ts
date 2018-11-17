@@ -9,7 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class doughnutChartComponent implements OnInit {
 
   // Doughnut
-  public doughnutChartLabels:string[] = ['Hombres', 'Mujeres'];
+  public doughnutChartLabels:string[] = ['Mujeres', 'Hombres'];
   public doughnutChartData:number[] = [350, 450];
   public doughnutChartType:string = 'doughnut';
 

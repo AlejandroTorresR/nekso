@@ -61,6 +61,32 @@ body{
     }
 }
 
+.action-btn{
+    cursor: pointer;
+    padding: 4px;
+}
+
+.floating{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: absolute;
+    right: 16px;
+    top: -20px;
+    cursor: pointer;
+    line-height: 64px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #FE0063;
+    i{
+        font-size: 28px;
+    }
+}
+
+.floating:hover{
+    background-color: #ea035d;
+}
+
 @media screen and (max-width: 767px) {
     .hide-mobile{
         display: none !important;

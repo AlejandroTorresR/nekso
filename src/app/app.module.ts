@@ -12,6 +12,7 @@ import { NeksoService } from './_utils/nekso.service';
 //pages
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DetailComponent } from './pages/detail/detail.component';
 
 //components
 import { MenuComponent } from './components/menu/menu.component';
@@ -25,6 +26,7 @@ import { PublicModule } from './pages/dashboard/public.module';
     AppComponent,
     LoginComponent,
     DashboardComponent,
+    DetailComponent,
     MenuComponent,
     HeaderCustomComponent
   ],

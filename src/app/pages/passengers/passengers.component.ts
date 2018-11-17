@@ -4,13 +4,13 @@ import { SweetalertsService } from '../../_utils/sweetalerts.service';
 import { NeksoService } from '../../_utils/nekso.service';
 
 @Component({
-  selector: 'app-drivers',
-  templateUrl: './drivers.component.html',
-  styleUrls: ['./drivers.component.scss']
+  selector: 'app-passengers',
+  templateUrl: './passengers.component.html',
+  styleUrls: ['./passengers.component.scss']
 })
-export class DriversComponent implements OnInit {
+export class PassengersComponent implements OnInit {
 
-  public drivers: any = this._NeksoService.drivers;
+  public passengers: any = this._NeksoService.passengers;
 
   constructor(
     public _SweetalertsService:SweetalertsService,
@@ -26,10 +26,10 @@ export class DriversComponent implements OnInit {
   }
 
   deleteUser(index, user){
-    this._SweetalertsService.confirmAlert('Borrar conductor', `¿Está seguro de borrar a ${user}?`)
+    this._SweetalertsService.confirmAlert('Borrar usuario', `¿Está seguro de borrar a ${user}?`)
     .then((res) => {
           if(res.value){
-            this._SweetalertsService.typeAlert('Confirmado', 'El conductor ha sido borrado', 'success')
+            this._SweetalertsService.typeAlert('Confirmado', 'El usuario ha sido borrado', 'success')
           } else {
             console.log(res)
           }          

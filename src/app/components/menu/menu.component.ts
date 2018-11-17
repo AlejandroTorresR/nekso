@@ -14,7 +14,6 @@ export class MenuComponent implements OnInit {
     {name : 'Conductores', url: 'drivers', icon: 'assignment_ind'},
     {name : 'Pasajeros', url: 'passengers', icon: 'account_box'}
   ]
-  public show: boolean = false;
 
   constructor(
     public _SweetalertsService: SweetalertsService,

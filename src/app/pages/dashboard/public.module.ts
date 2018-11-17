@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { PublicRouting } from './public.routing';
 
 // Material
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { DriversComponent } from '../drivers/drivers.component';
+import { PassengersComponent } from '../passengers/passengers.component';
 import { ChartsModule } from 'ng2-charts';
 import { doughnutChartComponent } from '../../components/doughnutChart/doughnutChart.component';
 import { barChartComponent } from '../../components/barChart/barChart.component';
@@ -21,6 +22,7 @@ import { barChartComponent } from '../../components/barChart/barChart.component'
     ],
     declarations: [
     	DriversComponent,
+        PassengersComponent,
     	doughnutChartComponent,
     	barChartComponent
     ],
