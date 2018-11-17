@@ -15,6 +15,7 @@ export class DetailComponent implements OnInit {
   public user: any;
   public objectKeys: any = Object.keys;
   public validForm: boolean = false;
+  public type: string;
 
   constructor(
     private fb: FormBuilder,
@@ -35,24 +36,31 @@ export class DetailComponent implements OnInit {
       zip: ['', Validators.required],
       gender: ['', Validators.required],
       phone: ['', Validators.required],
-      image: ['assets/user.jpg']
+      image: ['assets/user.jpg'],
+      brand: [''],
+      model: [''],
+      plate: ['']
     });
 
   }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params=>{
-      if(this.objectKeys(params)[0] != undefined){
-        let type = this.objectKeys(params)[0];
-        this.detailData.patchValue(this._NeksoService[type][params[type]])
+      let key = this.objectKeys(params)[0];
+      if(this.objectKeys(params)[0] == 'drivers' || this.objectKeys(params)[0] == 'passengers'){
+        this.detailData.patchValue(this._NeksoService[key][params[key]])
+        this.type = key;
+      }
+      if(this.objectKeys(params)[0] == 'create'){
+        this.type = params[key]
       }
     })
   }
 
   saveUser() {  
     if(this.detailData.valid){
-      this._SweetalertsService.typeAlert('Confirmado', 'El conductor ha sido guardado', 'success')
-      this.router.navigate(['dashboard/drivers'])
+      this._SweetalertsService.typeAlert('Confirmado', 'El usuario ha sido guardado', 'success')
+      this.router.navigate([`dashboard/${this.type}`])
     } else {
       this.validForm = true;
     }
